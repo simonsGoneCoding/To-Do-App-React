@@ -1,7 +1,6 @@
 import React from "react";
 
 const Task = (props) => {
-  console.log(props);
   const { text, date, id } = props.task;
 
   return (
