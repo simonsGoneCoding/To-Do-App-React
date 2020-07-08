@@ -3,13 +3,25 @@ import "./TaskList.css";
 
 import Task from "../Task/Task";
 
-const TaskList = () => {
+const TaskList = (props) => {
+  const tasks = props.tasks.map((task) => (
+    <Task
+      task={task}
+      key={task.id}
+      deleteTask={props.deleteTask}
+      changeTaskStatus={props.changeTaskStatus}
+    />
+  ));
+
   return (
     <div>
-      <h1>Task List</h1>
-      <Task />
-      <Task />
-      <Task />
+      <div className="active">
+        <h3>TO DO LIST</h3>
+        {tasks}
+      </div>
+      <div className="inactive">
+        <h3>FINISHED (0)</h3>
+      </div>
     </div>
   );
 };

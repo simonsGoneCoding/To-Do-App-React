@@ -6,7 +6,7 @@ class AddTask extends Component {
   render() {
     return (
       <div className="form">
-        <div>Add Task</div>
+        <h1>Add Task</h1>
       </div>
     );
   }
